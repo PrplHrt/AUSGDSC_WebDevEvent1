@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>GDSC AUS Example</title>
+        <link rel="stylesheet" href="example3.css">
+        <script>
+            // We can add JavaScript code to our HTML page and make things more interactive
+            // This is an alert that pops up right when the page loads
+            alert('Hello, developers! Welcome to the JavaScript example :D');
+
+            // We can also write functions that can be triggered with events, these are when certain things happen on the webpage
+            // We put code here to affect the contents of the HTML to make sure we wait until it loads
+            document.addEventListener('DOMContentLoaded', function() {
+                // Here we get all the buttons on the page and FOR EACH button...
+                document.querySelectorAll('button').forEach(function(button) {
+                    // we add an onclick function (something that happens when the button is clicked)
+                    button.onclick = function() {
+                        // Can you guess what this function does?
+                        document.querySelector('h1').style.color = button.dataset.color;
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>We are GDSC AUS</h1>
+        <h2>Welcome to the Web Dev Track!</h2>
+        <hr>
+        
+        <sub>Here we can play around with some JavaScript magic!</sub>
+        <br>
+        <button data-color="#e84435">Red</button>
+        <button data-color="#4285f4">Blue</button>
+        <button data-color="#0f9d58">Green</button>
+        <button data-color="#fbbc04">Yellow</button>
+        
+        <h3>About us</h3>
+        <strong>Google Developer Student Club (GDSC) is launching at AUS.</strong> This means that <i>exciting events are coming up</i>. The members will be able to learn about the new technologies available and receive hands-on experience on those technologies. There will also be challenges where members improve their knowledge and skills. To become a member, click on the "Join" button and stay tuned for our exciting events.
+        <br><br>
+        <a id="Join" href="https://gdsc.community.dev/american-university-of-sharjah/">Join!</a>
+
+        <h3 class="light" >Our Tracks</h3>
+        We're going through quite a few exciting tracks and we hope you'll join us for more!
+        <ul> 
+            <li>Machine Learning Track</li>
+            <li>Big Data Track</li>
+            <li>Security Track</li>
+            <li>Web Development Track</li>
+            <li>Dev Ops Track</li>
+        </ul>
+        
+        <a href = "https://cs50.harvard.edu/web/2020/notes/5/">Here's a good resource for looking into JavaScript</a>
+        <br><br>
+        <a href="example5.html">Here's a link to the next example</a>
+        <br><br>
+        <a href="example3.html">Here's a link to the previous example</a>
+    </body>
+</html>
